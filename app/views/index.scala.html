@@ -1,0 +1,12 @@
+@(message: String)
+
+@main("Employee Mgmt") {
+	<h1>@message<h1>
+	<form action = "@routes.Application.addEmployee()" method = "POST">
+		<input type = "text" name = "name" placeholder = "Enter name"><br/>
+		<input type = "text" name = "salary" placeholder = "Enter Salary"><br/>
+		<input type = "submit">
+	</form>
+	
+	<a href = "@routes.Application.viewEmployees()">View Employees</a>
+}

@@ -1,0 +1,15 @@
+@(employeeList: List[domain.Employee])
+
+@main("Employee Mgmt") {
+	<h1>Employee Mgmt<h1>
+	
+	<h2>View Employees</h2>
+	
+	<p>
+	@for(employee <- employeeList) {
+		@employee.getId()&nbsp;&nbsp;
+		@employee.getName()&nbsp;&nbsp;
+		@employee.getSalary()&nbsp;&nbsp;<br/>
+	}
+	</p>
+}
